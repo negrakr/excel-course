@@ -34,25 +34,23 @@ export function createToolbar(s) {
       active: s['textAlign'] === 'right'
     },
     {
-      value: {fontWeight: s['fontWeight'] === 'bold'
-        ? 'normal'
-        : 'bold'},
+      value: {fontWeight: s['fontWeight'] === 'bold' ? 'normal' : 'bold'},
       icon: 'format_bold',
       active: s['fontWeight'] === 'bold'
     },
     {
-      value: {fontStyle: s['fontStyle'] === 'italic'
-        ? 'normal'
-        : 'italic'},
-      icon: 'format_italic',
-      active: s['fontStyle'] === 'italic'
-    },
-    {
-      value: {textDecoration: s['textDecoration'] === 'underline'
-        ? 'none'
-        : 'underline'},
+      value: {
+        textDecoration: s['textDecoration'] === 'underline'
+          ? 'none'
+          : 'underline'
+      },
       icon: 'format_underlined',
       active: s['textDecoration'] === 'underline'
+    },
+    {
+      value: {fontStyle: s['fontStyle'] === 'italic' ? 'normal' : 'italic'},
+      icon: 'format_italic',
+      active: s['fontStyle'] === 'italic'
     }
   ]
   return buttons.map(toButton).join('')

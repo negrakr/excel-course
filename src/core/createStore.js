@@ -20,3 +20,5 @@ export function createStore(rootReducer, initialState = {}) {
     }
   }
 }
+
+// Extra Task - Переписать на класс

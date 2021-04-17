@@ -2,7 +2,6 @@
 @import "mixins";
 
 .excel__toolbar {
-  background: #6ac0b5;
   position: absolute;
   left: 0;
   right: 0;
@@ -14,6 +13,6 @@
   display: flex;
 
   .button {
-    @include button(#e5ff00);
+    @include button(green);
   }
 }

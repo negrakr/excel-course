@@ -1,3 +1,4 @@
+// Pure functions
 export function capitalize(string) {
   if (typeof string !== 'string') {
     return ''
@@ -9,7 +10,7 @@ export function range(start, end) {
   if (start > end) {
     [end, start] = [start, end]
   }
-  return new Array(end - start +1)
+  return new Array(end - start + 1)
       .fill('')
       .map((_, index) => start + index)
 }
@@ -35,5 +36,17 @@ export function camelToDashCase(str) {
 export function toInlineStyles(styles = {}) {
   return Object.keys(styles)
       .map(key => `${camelToDashCase(key)}: ${styles[key]}`)
-      .join('; ')
+      .join(';')
+}
+
+export function debounce(fn, wait) {
+  let timeout
+  return function(...args) {
+    const later = () => {
+      clearTimeout(timeout)
+      fn.apply(this, args)
+    }
+    clearTimeout(timeout)
+    timeout = setTimeout(later, wait)
+  }
 }
