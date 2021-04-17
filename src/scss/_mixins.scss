@@ -7,7 +7,7 @@
   display: inline-block;
   color: rgba(0, 0, 0, .7);
 
-  & > i {
+  & i {
     font-size: 18px;
   }
 
@@ -16,10 +16,11 @@
   }
 
   &:hover {
-    background: #607a77;
+    background: #eee;
     cursor: pointer;
   }
 }
+
 
 @mixin clear-list() {
   list-style: none;
