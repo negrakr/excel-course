@@ -1,4 +1,4 @@
-export function myParse(value = '') {
+export function parse(value = '') {
   if (value.startsWith('=')) {
     try {
       return eval(value.slice(1))
@@ -8,3 +8,4 @@ export function myParse(value = '') {
   }
   return value
 }
+
